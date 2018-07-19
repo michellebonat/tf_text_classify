@@ -83,3 +83,11 @@ partial_x_train = train_data[10000:]
 
 y_val = train_labels[:10000]
 partial_y_train = train_labels[10000:]
+
+# Train the model
+history = model.fit(partial_x_train,
+                    partial_y_train,
+                    epochs=40,
+                    batch_size=512,
+                    validation_data=(x_val, y_val),
+                    verbose=1)
