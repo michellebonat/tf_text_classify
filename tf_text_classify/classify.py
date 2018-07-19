@@ -52,5 +52,8 @@ test_data = keras.preprocessing.sequence.pad_sequences(test_data,
                                                        value=word_index["<PAD>"],
                                                        padding='post',
                                                        maxlen=256)
+
 # Look at the length of the examples now, they should be the same as each other
 len(train_data[0]), len(train_data[1])
+
+
