@@ -57,3 +57,5 @@ test_data = keras.preprocessing.sequence.pad_sequences(test_data,
 len(train_data[0]), len(train_data[1])
 
 
+# Look at the first review again, it is now padded, standardized length
+print(train_data[0])
