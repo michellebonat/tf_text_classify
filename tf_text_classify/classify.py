@@ -56,6 +56,18 @@ test_data = keras.preprocessing.sequence.pad_sequences(test_data,
 # Look at the length of the examples now, they should be the same as each other
 len(train_data[0]), len(train_data[1])
 
-
 # Look at the first review again, it is now padded, standardized length
 print(train_data[0])
+
+# Build the model
+# Input data consists of array of word-indices. The labels to predict are either 0 or 1
+# Input shape is the vocabulary count used for the movie reviews (10,000 words)
+vocab_size = 10000
+
+model = keras.Sequential()
+model.add(keras.layers.Embedding(vocab_size, 16))
+model.add(keras.layers.GlobalAveragePooling1D())
+model.add(keras.layers.Dense(16, activation=tf.nn.relu))
+model.add(keras.layers.Dense(1, activation=tf.nn.sigmoid))
+
+model.summary()
