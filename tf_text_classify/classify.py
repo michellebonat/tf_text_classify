@@ -41,4 +41,16 @@ def decode_review(text):
 # Use the decode_review function to display the text for the first review
 decode_review(train_data[0])
 
+# Prepare the data
+# Convert the reviews (arrays of integers) into tensors to be fed into neural network using pad_sequences
+train_data = keras.preprocessing.sequence.pad_sequences(train_data,
+                                                        value=word_index["<PAD>"],
+                                                        padding='post',
+                                                        maxlen=256)
 
+test_data = keras.preprocessing.sequence.pad_sequences(test_data,
+                                                       value=word_index["<PAD>"],
+                                                       padding='post',
+                                                       maxlen=256)
+# Look at the length of the examples now, they should be the same as each other
+len(train_data[0]), len(train_data[1])
