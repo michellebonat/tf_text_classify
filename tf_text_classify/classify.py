@@ -93,6 +93,15 @@ history = model.fit(partial_x_train,
                     verbose=1)
 
 # Evaluate the model
-results = model.evaluate(test_data, test_labels)
+# results = model.evaluate(test_data, test_labels)
 
-print(results)
+# print(results)
+
+# Create a graph of accuracy and loss over time
+# Dictionary with an entry for each of the four metrics monitored during training and validation
+history_dict = history.history
+history_dict.keys()
+
+dict_keys(['loss', 'acc', 'val_acc', 'val_loss'])
+
+
