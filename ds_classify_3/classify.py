@@ -16,4 +16,10 @@ dataset_url = 'https://s3.amazonaws.com/worldquant-dropbox/datasimply_export.csv
 data = pd.read_csv(dataset_url)
 
 # Uncomment this to print first 5 rows of data
-print data.head()
+# print data.head()
+
+# Uncomment this to print the data shape
+# print data.shape
+
+# Uncomment this to print data overview summary stats
+print data.describe()
