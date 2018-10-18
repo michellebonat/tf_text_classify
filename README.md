@@ -1,5 +1,5 @@
 # tf_text_classify
-The classic exploration of movie reviews data with machine learning using TensorFlow and Keras.
+The classic exploration of movie reviews data with machine learning using TensorFlow and Keras. This is based on a tutorial in the Tensor Flow documentation. 
 
 ## Getting Started
 
